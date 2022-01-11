@@ -1,0 +1,20 @@
+* {
+
+}
+
+
+.DisplayBox {
+    max-width: 800px;
+}
+
+.General {
+    margin-bottom: 16px;
+}
+
+#phoneNo {
+    margin-left: auto;
+}
+
+.NameAndNo {
+    display: flex;
+}
