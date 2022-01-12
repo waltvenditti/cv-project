@@ -5,10 +5,21 @@
 
 .DisplayBox {
     max-width: 800px;
+    margin-bottom: 16px;
 }
 
 .General {
-    margin-bottom: 16px;
+
+}
+
+.Education {
+    display: flex;
+    flex-direction: column;
+}
+
+.Work {
+    display: flex;
+    flex-direction: column;
 }
 
 #phoneNo {
@@ -17,4 +28,19 @@
 
 .NameAndNo {
     display: flex;
+}
+
+.roundButton {
+    margin-left: auto;
+    max-width: 20px;
+    border-radius: 50%;
+}
+
+.roundButtonHidden {
+    display: none;
+}
+
+.divAddMore {
+    display:flex;
+    flex-direction: row-reverse;
 }
