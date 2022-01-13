@@ -63,6 +63,13 @@ class App extends Component {
         expBtn: true,
       },
     };
+    this.onChange = this.onChange.bind(this);
+    this.onChangeEdu = this.onChangeEdu.bind(this);
+    this.onChangeWork = this.onChangeWork.bind(this);
+    this.onClickEduExpand = this.onClickEduExpand.bind(this);
+    this.onClickWorkExpand = this.onClickWorkExpand.bind(this);
+    this.onClickSubmit = this.onClickSubmit.bind(this);
+    this.onClickEdit = this.onClickEdit.bind(this);
   }
 
   onChange = (event) => {
@@ -144,7 +151,6 @@ class App extends Component {
         editMode: !this.state.editMode,
       });
     }
-    console.log(this.state);
   };
 
   onClickEdit = () => {
@@ -158,48 +164,63 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <h1>Curriculum Vitae</h1>
         <h2>General Information</h2>
-        <General onChange={this.onChange} stateInfo={this.state} />
+        <div className="divGen">
+          <General onChange={this.onChange} stateInfo={this.state} />
+        </div>
         <h2>Education</h2>
-        <Education
-          onChangeEdu={this.onChangeEdu}
-          stateInfo={this.state}
-          eduCount="1"
-          onClickEduExpand={this.onClickEduExpand}
-        />
-        <Education
-          onChangeEdu={this.onChangeEdu}
-          stateInfo={this.state}
-          eduCount="2"
-          onClickEduExpand={this.onClickEduExpand}
-        />
-        <Education
-          onChangeEdu={this.onChangeEdu}
-          stateInfo={this.state}
-          eduCount="3"
-          onClickEduExpand={this.onClickEduExpand}
-        />
+        <div className="divEdu">
+          <Education
+            onChangeEdu={this.onChangeEdu}
+            stateInfo={this.state}
+            eduCount="1"
+            onClickEduExpand={this.onClickEduExpand}
+          />
+          <Education
+            onChangeEdu={this.onChangeEdu}
+            stateInfo={this.state}
+            eduCount="2"
+            onClickEduExpand={this.onClickEduExpand}
+          />
+          <Education
+            onChangeEdu={this.onChangeEdu}
+            stateInfo={this.state}
+            eduCount="3"
+            onClickEduExpand={this.onClickEduExpand}
+          />
+        </div>
         <h2>Work Experience</h2>
-        <Work 
-        onChangeWork={this.onChangeWork}
-        stateInfo={this.state}
-        workCount="1"
-        onClickWorkExpand={this.onClickWorkExpand}
-        />
-        <Work 
-        onChangeWork={this.onChangeWork}
-        stateInfo={this.state}
-        workCount="2"
-        onClickWorkExpand={this.onClickWorkExpand}
-        />
-        <Work 
-        onChangeWork={this.onChangeWork}
-        stateInfo={this.state}
-        workCount="3"
-        onClickWorkExpand={this.onClickWorkExpand}
-        />
-        <button onClick={this.onClickSubmit}>Submit</button>
-        <button onClick={this.onClickEdit}>Edit</button>
+        <div className="divWork">
+          <Work 
+          onChangeWork={this.onChangeWork}
+          stateInfo={this.state}
+          workCount="1"
+          onClickWorkExpand={this.onClickWorkExpand}
+          />
+          <Work 
+          onChangeWork={this.onChangeWork}
+          stateInfo={this.state}
+          workCount="2"
+          onClickWorkExpand={this.onClickWorkExpand}
+          />
+          <Work 
+          onChangeWork={this.onChangeWork}
+          stateInfo={this.state}
+          workCount="3"
+          onClickWorkExpand={this.onClickWorkExpand}
+          />
+        </div>
+        <div className="divBtns">
+          <button 
+          onClick={this.onClickSubmit}
+          className="btnSubmit"
+          >Submit</button>
+          <button 
+          onClick={this.onClickEdit}
+          className="btnEdit"
+          >Edit</button>
+        </div>
       </div>
     );
   }

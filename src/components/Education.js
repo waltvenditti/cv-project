@@ -53,7 +53,7 @@ class Education extends Component {
     } else {
       return (
         <div className={classes}>
-          <p>School Name: {state[stateName].schoolName}</p>
+          <p>School Name: <strong>{state[stateName].schoolName}</strong></p>
           <p>Degree: {state[stateName].degree}</p>
           <p>Graduated: {state[stateName].year}</p>
         </div>

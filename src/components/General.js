@@ -40,7 +40,7 @@ class General extends Component {
       return (
         <div className={classes}>
           <div className="NameAndNo">
-            <span>Name: {state.general.name}</span>
+            <span>Name: <strong>{state.general.name}</strong></span>
             <span id="phoneNo">Phone #: {state.general.phoneNo}</span>
           </div>
           <p>Address: {state.general.address}</p>

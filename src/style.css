@@ -2,6 +2,9 @@
 
 }
 
+h1 {
+    margin-bottom: 36px;
+}
 
 .DisplayBox {
     max-width: 800px;
@@ -9,7 +12,8 @@
 }
 
 .General {
-
+    display: flex;
+    flex-direction: column;
 }
 
 .Education {
@@ -20,6 +24,14 @@
 .Work {
     display: flex;
     flex-direction: column;
+}
+
+.Work.DisplayBox div {
+    margin-top: 8px;
+}
+
+span {
+    margin-top: 4px;
 }
 
 #phoneNo {
@@ -43,4 +55,51 @@
 .divAddMore {
     display:flex;
     flex-direction: row-reverse;
+}
+
+.divGen {
+    border: 2px solid black;
+    border-radius: 4px;
+    padding: 8px;
+    max-width: 800px;
+}
+
+.divEdu {
+    border: 2px solid black;
+    border-radius: 4px;
+    padding: 8px;
+    max-width: 800px;
+}
+
+.divWork {
+    border: 2px solid black;
+    border-radius: 4px;
+    padding: 8px;
+    max-width: 800px;
+}
+
+.divBtns {
+    margin-top: 16px;
+    margin-left: 2px;
+}
+
+.btnSubmit {
+    width: 80px;
+    border: 2px solid black;
+    border-radius: 4px;
+    height: 40px;
+    font-weight: bold;
+    background-color: dimgrey;
+    color: whitesmoke;
+}
+
+.btnEdit {
+    width: 80px;
+    margin-left: 8px;
+    border: 2px solid black;
+    border-radius: 4px;
+    height: 40px;
+    font-weight: bold;
+    background-color: dimgrey;
+    color: whitesmoke;
 }

@@ -73,7 +73,7 @@ class Work extends Component {
     } else {
       return (
         <div className={classes}>
-          <p>Company: {state[stateName].company}</p>
+          <p>Company: <strong>{state[stateName].company}</strong></p>
           <p>Position: {state[stateName].position}</p>
           <p>Work Responsibilities: {state[stateName].desc}</p>
           <p>
