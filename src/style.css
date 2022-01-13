@@ -44,8 +44,13 @@ span {
 
 .roundButton {
     margin-left: auto;
+    margin-top: 4px;
+    padding-left: 8px;
+    padding-right: 14px;
+    font-weight: bold;
     max-width: 20px;
     border-radius: 50%;
+    border: 2px solid black;
 }
 
 .roundButtonHidden {
